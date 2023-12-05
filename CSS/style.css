@@ -1,0 +1,182 @@
+/*
+File: style.css
+GUI Assignment: HW4
+Charlie Auwerda
+charles_auwerda@student.uml.edu
+Copyright (c) 2023 by Charlie Auwerda. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by CA on December 04 November 11, 2023
+*/
+
+/* General Styling */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 20px;
+	color: #333;
+}
+
+/* Highlight Styles */
+.highlight {
+	background-color: yellow;
+}
+
+.highlightproduct {
+	background-color: orange;
+}
+
+/* Form Container Styling */
+#tableForm {
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column; /* Updated to stack form elements vertically */
+	align-items: center; /* Center-align the flex items */
+	flex-wrap: wrap;
+}
+
+/* Form Elements Styling */
+#tableForm > div {
+	width: 100%; /* Full width for each form group */
+	margin-bottom: 10px; /* Space between form groups */
+}
+
+#tableForm input[type=number],
+#tableForm select,
+.slider {
+	width: calc(100% - 22px); /* Full width minus padding and border */
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: 5px; /* Space between input/slider and next form group */
+	box-sizing: border-box;
+}
+
+#tableForm button {
+	padding: 10px 20px;
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	width: auto; /* Auto width to fit content */
+	display: block; /* Block display to take full width */
+	margin-top: 10px; /* Space above the button */
+}
+
+#tableForm button:hover {
+	background-color: #4cae4c;
+}
+
+/* Error Message Styling */
+#errorContainer, #error-message {
+	color: red;
+	margin-top: 10px;
+}
+
+#result {
+	padding: 10px;
+	width: 100%;
+	font-size: 1.2em;
+	color: #333;
+	font-weight: bold;
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+#result:empty {
+	background-color: #fff;
+	color: #bbb;
+}
+
+/* Table Container & Table Styling */
+#tableOutput {
+	margin: 20px auto;
+	overflow: auto; /* Combined x and y overflow properties */
+	max-height: 500px;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+th, td {
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #ddd;
+	transition: background-color 0.3s ease;
+}
+
+th {
+	background-color: #f2f2f2;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+tbody th {
+	position: sticky;
+	left: 0;
+	background-color: #f9f9f9;
+	border-right: 1px solid #ddd;
+}
+
+thead th {
+	border-top: none;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+td:hover {
+	background-color: #eaeaea;
+}
+
+label.error, input.error {
+	color: red;
+	background: #ffd2d2;
+	border: 1px solid #ff0000;
+	padding: 4px;
+	margin-top: 2px;
+}
+
+/* Tab Styles */
+#tabs .ui-tabs-nav {
+	padding-left: 0;
+	background: none;
+	border-width: 0;
+}
+
+#tabs .ui-tabs-nav li {
+	list-style-type: none;
+}
+
+#tabs .ui-tabs-nav li a {
+	padding: 0.5em 1em;
+}
+
+#tabs .ui-tabs-panel {
+	padding: 20px;
+	border: 1px solid #ddd;
+	overflow: auto; /* Combined x and y overflow properties */
+	max-height: 500px;
+}

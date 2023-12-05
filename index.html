@@ -1,0 +1,53 @@
+<!--
+File: index.html
+GUI Assignment: HW4
+Charlie Auwerda
+charles_auwerda@student.uml.edu
+Copyright (c) 2023 by Charlie Auwerda. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by CA on December 04 November 11, 2023
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <form id="tableForm">
+			<label for="multiplierStart">Multiplier Start:</label>
+			<input type="number" id="multiplierStart" name="multiplierStart" required>
+			<div id="multiplierStartSlider" class="slider"></div>
+			
+			<label for="multiplierEnd">Multiplier End:</label>
+			<input type="number" id="multiplierEnd" name="multiplierEnd" required>
+			<div id="multiplierEndSlider" class="slider"></div>
+			
+			<label for="multiplicandStart">Multiplicand Start:</label>
+			<input type="number" id="multiplicandStart" name="multiplicandStart" required>
+			<div id="multiplicandStartSlider" class="slider"></div>
+			
+			<label for="multiplicandEnd">Multiplicand End:</label>
+			<input type="number" id="multiplicandEnd" name="multiplicandEnd" required>
+			<div id="multiplicandEndSlider" class="slider"></div>
+
+			<button type="submit">Generate Table</button>
+        </form>
+    </div>
+    <div id="tabs">
+        <ul></ul> <!-- Empty list for tabs -->
+        <div id="tableOutput"></div> <!-- Container for tab content -->
+    </div>
+    <div id="errorContainer"></div>
+    <div id="error-message" style="color: red;"></div>
+
+    <script src="Javascript/script.js"></script>
+</body>
+</html>
